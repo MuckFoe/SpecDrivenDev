@@ -3,7 +3,7 @@
 Last updated: 2026-10-09.
 
 ## What this repo is
-Reusable spec-driven-development skill-pack: `CLAUDE.md`, `.claude/skills/sdd-*` and `specs/` (index template, viewer, save server), meant to be copied into a target project repo (not a product built here). Research backing this lives in `00-index.md` through `07-allegro-tech-best-practices.md`.
+Reusable spec-driven-development skill-pack: `CLAUDE.md`, `.claude/skills/sdd-*` and `specs/` (index template, viewer, save server), meant to be copied into a target project repo (not a product built here). The research notes the pipeline was derived from (Spec Kit, Kiro, Sean Grove, Thoughtworks, Tessl, Wikipedia, Allegro) were removed from the repository on 2026-10-09; they remain in git history.
 
 ## Status: pipeline v1 built and used on a first real project through specify → plan → tasks. Implement and validate have not been exercised yet. Skills unreviewed by human.
 

@@ -154,7 +154,6 @@ static server the page works read-only.
 |---|---|
 | `CLAUDE.md`, `.claude/skills/`, `specs/` | the pack |
 | `STATE.md` | design decisions with reasons, findings from first use, next steps |
-| `00-index.md` – `07-*.md` | the research the pipeline is based on: Spec Kit, Kiro, Sean Grove, Thoughtworks, Tessl, Wikipedia, Allegro |
 
 Status: used on one project through specify, plan and tasks. Implement and
 validate are untested in practice.
