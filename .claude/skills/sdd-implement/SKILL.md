@@ -17,7 +17,7 @@ Read: the target task's entry in tasks.md, its acceptance criteria, and only the
 2. Write the test(s) first, directly from the task's acceptance criteria. Run them and confirm they fail for the right reason.
 3. Implement the minimum to make the test(s) pass. No speculative extras beyond this task's scope.
 4. Run the full test(s) for this task and confirm green. Run broader tests if the task risks touching shared code.
-5. Mark the task done in `tasks.md` (checkbox/status), leave everything else in the file untouched.
+5. Mark the task done in `tasks.md` by ticking its line in the `## Checklist` (`- [ ]` becomes `- [x]`). Leave everything else in the file untouched.
 6. Stop. Show the diff and: **"Review this task's diff, then run /sdd-implement for the next task/wave."**
 
 ## Do / Don't

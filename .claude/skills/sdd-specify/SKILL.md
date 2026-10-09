@@ -24,7 +24,8 @@ Read only: `memory/constitution.md` (if present). Do not read other features und
    - **Out of scope** — explicit exclusions, to stop scope creep later.
    - **Acceptance criteria** — Given/When/Then, one block per requirement, concrete enough to become a test.
    - **Open questions** — anything still unresolved, marked `[NEEDS CLARIFICATION: <specific question>]`.
-4. Stop. Print the file path and: **"Resolve every [NEEDS CLARIFICATION] marker and approve spec.md before running /sdd-plan."**
+4. Add a row for the new spec to `specs/README.md` (number, link to `<NNN-slug>/spec.md`, one-line summary, status `draft`, count of open questions). Touch no other row. If the file is missing, create it with a `# Specs` heading and a table with the columns `# | Spec | What it requires | Status | Open questions`.
+5. Stop. Print the file path and: **"Resolve every [NEEDS CLARIFICATION] marker and approve spec.md before running /sdd-plan."**
 
 ## Do / Don't
 

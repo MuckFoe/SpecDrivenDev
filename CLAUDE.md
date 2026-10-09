@@ -1,6 +1,6 @@
 # Spec-Driven Development (SDD)
 
-Drop this file + `.claude/skills/sdd-*` into a target repo root to run SDD there.
+Drop this file, `.claude/skills/sdd-*` and the `specs/` folder (`README.md`, `index.html`, `serve.py`) into a target repo root to run SDD there.
 
 ## Pipeline
 
@@ -9,7 +9,7 @@ Drop this file + `.claude/skills/sdd-*` into a target repo root to run SDD there
 | # | Skill | Reads | Writes | Human gate |
 |---|---|---|---|---|
 | 0 | `/sdd-constitution` | (interview) | `memory/constitution.md` | approve principles — run once, rarely revisited |
-| 1 | `/sdd-specify` | constitution | `specs/<slug>/spec.md` | resolve every `[NEEDS CLARIFICATION]`, approve |
+| 1 | `/sdd-specify` | constitution | `specs/<slug>/spec.md`, a row in `specs/README.md` | resolve every `[NEEDS CLARIFICATION]`, approve |
 | 2 | `/sdd-plan` | spec.md, constitution | `specs/<slug>/plan.md` | approve architecture |
 | 3 | `/sdd-tasks` | plan.md, spec.md | `specs/<slug>/tasks.md` | approve/reorder task list |
 | 4 | `/sdd-implement` | one task | code + tests, task ticked off | approve diff, per task |
@@ -29,14 +29,26 @@ Drop this file + `.claude/skills/sdd-*` into a target repo root to run SDD there
 
 ```
 memory/constitution.md          # project-wide, one-time, rarely edited
+specs/README.md                 # index: one row per spec, with its status
+specs/index.html, serve.py      # viewer and editor for everything under specs/
 specs/<NNN-feature-slug>/
   spec.md                       # WHAT/WHY — stable
   plan.md                       # HOW — architecture, data model, contracts
-  tasks.md                      # execution delta — per-task checklist
+  tasks.md                      # execution delta — per-task checklist; progress lives here
   notes.md                      # validation log, drift/learnings, appended each cycle
 ```
 
 One folder per feature. Never one monolithic spec for the whole product.
+
+## Seeing and changing it
+
+`python specs/serve.py`, then <http://127.0.0.1:8777/>. The viewer reads the markdown under `specs/` each time it loads and holds no copy of it:
+
+- **Index** — every spec with its status, open questions and which artifacts exist; each spec's documents; requirements paired with their acceptance criteria.
+- **Progress** — every spec and task, charts of tasks per spec, artifacts reached and tasks per wave, and filters over all of it.
+- **Edit** — any of those files in the browser, and task checkboxes by clicking. A save writes straight to the markdown file; git is the undo.
+
+Progress is the checkboxes in `tasks.md`, nothing else. `/sdd-tasks` writes the format the viewer counts; `specs/README.md` documents the viewer.
 
 ## Context management — non-negotiable
 
